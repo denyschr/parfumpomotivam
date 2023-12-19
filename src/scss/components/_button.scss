@@ -1,0 +1,24 @@
+.button {
+	padding: toRem(12) toRem(20);
+	border-radius: toRem(4);
+	border: toRem(1) solid var(--straw);
+	background: #2b2825;
+	box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
+	text-align: center;
+	span {
+		@include gradient;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: var(--bgGold);
+		}
+		@media (any-hover: hover) {
+			&:hover span {
+				@include gradientNone;
+				color: #3c3428;
+			}
+		}
+	}
+}

@@ -1,0 +1,577 @@
+<section class="page__catalog catalog section-offset">
+	<div class="catalog__container">
+		<h2 class="catalog__title title title--offset title--fs24">Catalog</h2>
+		<div class="catalog__body">
+			<div class="catalog__filter filter-catalog">
+				<button type="button" class="filter-catalog__button">
+					<span>Filters</span>
+					<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2857 0C14.2226 0 12.4869 1.5534 12.0874 3.6H0.857143C0.629814 3.6 0.411797 3.69482 0.251051 3.8636C0.0903058 4.03239 0 4.2613 0 4.5C0 4.73869 0.0903058 4.96761 0.251051 5.1364C0.411797 5.30518 0.629814 5.4 0.857143 5.4H12.0874C12.4869 7.4475 14.2217 9 16.2857 9C18.3497 9 20.0846 7.4475 20.484 5.4H23.1429C23.3702 5.4 23.5882 5.30518 23.7489 5.1364C23.9097 4.96761 24 4.73869 24 4.5C24 4.2613 23.9097 4.03239 23.7489 3.8636C23.5882 3.69482 23.3702 3.6 23.1429 3.6H20.484C20.0846 1.5534 18.3497 0 16.2857 0ZM16.2857 1.8C17.7163 1.8 18.8571 2.9979 18.8571 4.5C18.8571 6.0021 17.7163 7.2 16.2857 7.2C14.8551 7.2 13.7143 6.0021 13.7143 4.5C13.7143 2.9979 14.8551 1.8 16.2857 1.8ZM7.71429 9C5.65114 9 3.91543 10.5534 3.516 12.6H0.857143C0.629814 12.6 0.411797 12.6948 0.251051 12.8636C0.0903058 13.0324 0 13.2613 0 13.5C0 13.7387 0.0903058 13.9676 0.251051 14.1364C0.411797 14.3052 0.629814 14.4 0.857143 14.4H3.516C3.91543 16.4475 5.65029 18 7.71429 18C9.77829 18 11.5131 16.4475 11.9126 14.4H23.1429C23.3702 14.4 23.5882 14.3052 23.7489 14.1364C23.9097 13.9676 24 13.7387 24 13.5C24 13.2613 23.9097 13.0324 23.7489 12.8636C23.5882 12.6948 23.3702 12.6 23.1429 12.6H11.9126C11.5131 10.5534 9.77829 9 7.71429 9ZM7.71429 10.8C9.14486 10.8 10.2857 11.9979 10.2857 13.5C10.2857 15.0021 9.14486 16.2 7.71429 16.2C6.28371 16.2 5.14286 15.0021 5.14286 13.5C5.14286 11.9979 6.28371 10.8 7.71429 10.8Z" fill="url(#filter-linear)"/>
+						<defs>
+						<linearGradient id="filter-linear" x1="-0.643216" y1="2.83929" x2="24.4601" y2="4.22986" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#C09E6C"/>
+							<stop offset="0.426246" stop-color="#FFEBCC"/>
+							<stop offset="1" stop-color="#BF936B"/>
+						</linearGradient>
+						</defs>
+					</svg>
+				</button>
+				<div class="filter-catalog__body">
+					<div class="filter-catalog__main">
+						<ul class="filter-catalog__items">
+							<li class="filter-catalog__item item-filter-catalog">
+								<button data-dropdown type="button" class="item-filter-catalog__title">
+									<span>Brand</span>
+								</button>
+								<div class="item-filter-catalog__body list-catalog">
+									<button data-dropdown type="button" class="list-catalog__title"><span>All brands</span></button>
+									<div class="list-catalog__body">
+										<div class="list-catalog__field search">
+											<input name="form[]" type="text" class="search__input" placeholder="Find a perfume..">
+											<img class="search__icon" src="icons/search.svg" alt="Search">
+										</div>
+										<ul data-simplebar class="list-catalog__items">
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="all-brands" type="checkbox" class="list-catalog__checkbox">
+													<label for="all-brands" class="list-catalog__label">All (23)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-ajmal" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-ajmal" class="list-catalog__label">Ajmal (7)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-acqua-di-parm" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-acqua-di-parm" class="list-catalog__label">Acqua di parma (2)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-alexandre-j" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-alexandre-j" class="list-catalog__label">Alexandre. J (2)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-amouage" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-amouage" class="list-catalog__label">Amouage (4)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-anna-sui" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-anna-sui" class="list-catalog__label">Anna Sui (1)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-antonio-banderas" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-antonio-banderas" class="list-catalog__label">Antonio Banderas (2)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-louis-g" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-louis-g" class="list-catalog__label">Louis G (5)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="brand-antonio-decardo" type="checkbox" class="list-catalog__checkbox">
+													<label for="brand-antonio-decardo" class="list-catalog__label">Antonio Decardo (12)</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="filter-catalog__item item-filter-catalog">
+								<button data-dropdown type="button" class="item-filter-catalog__title">
+									<span>Price</span>
+								</button>
+								<div class="item-filter-catalog__body item-filter-catalog__body--price">
+									<div data-range class="item-filter-catalog__price price-filter">
+										<div data-range-slider class="price-filter__range"></div>
+										<div class="price-filter__text">
+											<span data-range-from data-value="500">from 500 ₴</span>
+											<span data-range-to data-value="9662">9 662 ₴</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="filter-catalog__item item-filter-catalog">
+								<button data-dropdown type="button" class="item-filter-catalog__title">
+									<span>Gender</span>
+								</button>
+								<div class="item-filter-catalog__body">
+									<div class="item-filter-catalog__checkbox checkbox">
+										<input id="men" name="form[]" type="checkbox" class="checkbox__input">
+										<label for="men" class="checkbox__label">Men (126)</label>
+									</div>
+									<div class="item-filter-catalog__checkbox checkbox">
+										<input id="women" name="form[]" type="checkbox" class="checkbox__input">
+										<label for="women" class="checkbox__label">Women (182)</label>
+									</div>
+									<div class="item-filter-catalog__checkbox checkbox">
+										<input id="unisex" name="form[]" type="checkbox" class="checkbox__input">
+										<label for="unisex" class="checkbox__label">Unisex (183)</label>
+									</div>
+								</div>
+							</li>
+							<li class="filter-catalog__item item-filter-catalog">
+								<button data-dropdown type="button" class="item-filter-catalog__title">
+									<span>Notes</span>
+								</button>
+								<div class="item-filter-catalog__body list-catalog">
+									<button data-dropdown type="button" class="list-catalog__title"><span>All notes</span></button>
+									<div class="list-catalog__body">
+										<div class="list-catalog__field search">
+											<input name="form[]" type="text" class="search__input" placeholder="Find a perfume..">
+											<img class="search__icon" src="icons/search.svg" alt="Search">
+										</div>
+										<ul data-simplebar class="list-catalog__items">
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="all-notes" type="checkbox" class="list-catalog__checkbox">
+													<label for="all-notes" class="list-catalog__label">All (15)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-akigalawood" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-akigalawood" class="list-catalog__label">Akigalawood (3)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-ambertonic" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-ambertonic" class="list-catalog__label">Ambertonic (1)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-amberwood" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-amberwood" class="list-catalog__label">Amberwood (11)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-ambrettolide" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-ambrettolide" class="list-catalog__label">Ambrettolide (1)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-iso-e-super" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-iso-e-super" class="list-catalog__label">Iso e super (6)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-apricot" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-apricot" class="list-catalog__label">Apricot (6)</label>
+												</div>
+											</li>
+											<li class="list-catalog__item">
+												<div class="list-catalog__line">
+													<input id="note-orange" type="checkbox" class="list-catalog__checkbox">
+													<label for="note-orange" class="list-catalog__label">Orange (5)</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="filter-catalog__reset">
+						<span>Reset</span>
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M26 14L14 26" stroke="#776C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14 14L26 26" stroke="#776C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="catalog__content">
+				<div class="catalog__control">
+					<select name="form[]" class="control">
+						<option value="1" selected>By popularity</option>
+						<option value="2">By rating</option>
+						<option value="3">Sorting from last</option>
+						<option value="4">Price descending</option>
+						<option value="5">Price in ascending order</option>
+					</select>
+				</div>
+				<ul class="catalog__products">
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="The devil is a loser by Mushfig">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">The devil is a loser by Mushfig</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="devil-by-mushfig-10" name="devil-by-mushfig-form[]" type="radio" class="radio-volume__input" checked>
+										<label for="devil-by-mushfig-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="devil-by-mushfig-30" name="devil-by-mushfig-form[]" type="radio" class="radio-volume__input">
+										<label for="devil-by-mushfig-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="devil-by-mushfig-50" name="devil-by-mushfig-form[]" type="radio" class="radio-volume__input">
+										<label for="devil-by-mushfig-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="devil-by-mushfig-100" name="devil-by-mushfig-form[]" type="radio" class="radio-volume__input">
+										<label for="devil-by-mushfig-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Eros">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Eros</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="eros-10" type="radio" name="eros-form[]" class="radio-volume__input" checked>
+										<label for="eros-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="eros-30" type="radio" name="eros-form[]" class="radio-volume__input">
+										<label for="eros-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="eros-50" type="radio" name="eros-form[]" class="radio-volume__input">
+										<label for="eros-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="eros-100" type="radio" name="eros-form[]" class="radio-volume__input">
+										<label for="eros-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Homme">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Homme</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="homme-10" type="radio" name="homme-form[]" class="radio-volume__input" checked>
+										<label for="homme-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="homme-30" type="radio" name="homme-form[]" class="radio-volume__input">
+										<label for="homme-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="homme-50" type="radio" name="homme-form[]" class="radio-volume__input">
+										<label for="homme-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="homme-100" type="radio" name="homme-form[]" class="radio-volume__input">
+										<label for="homme-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>	
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Versace">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Versace</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="versace-10" type="radio" name="versace-form[]" class="radio-volume__input" checked>
+										<label for="versace-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="versace-30" type="radio" name="versace-form[]" class="radio-volume__input">
+										<label for="versace-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="versace-50" type="radio" name="versace-form[]" class="radio-volume__input">
+										<label for="versace-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="versace-100" type="radio" name="versace-form[]" class="radio-volume__input">
+										<label for="versace-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Morale Parfums">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Morale Parfums</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="morale-parfums-10" type="radio" name="morale-parfums-form[]" class="radio-volume__input" checked>
+										<label for="morale-parfums-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="morale-parfums-30" type="radio" name="morale-parfums-form[]" class="radio-volume__input">
+										<label for="morale-parfums-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="morale-parfums-50" type="radio" name="morale-parfums-form[]" class="radio-volume__input">
+										<label for="morale-parfums-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="morale-parfums-100" type="radio" name="morale-parfums-form[]" class="radio-volume__input">
+										<label for="morale-parfums-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Givenchy">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Givenchy</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="givenchy-10" type="radio" name="givenchy-form[]" class="radio-volume__input" checked>
+										<label for="givenchy-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="givenchy-30" type="radio" name="givenchy-form[]" class="radio-volume__input">
+										<label for="givenchy-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="givenchy-50" type="radio" name="givenchy-form[]" class="radio-volume__input">
+										<label for="givenchy-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="givenchy-100" type="radio" name="givenchy-form[]" class="radio-volume__input">
+										<label for="givenchy-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="La Rive">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">La Rive</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="la-rive-10" type="radio" name="la-rive-form[]" class="radio-volume__input" checked>
+										<label for="la-rive-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="la-rive-30" type="radio" name="la-rive-form[]" class="radio-volume__input">
+										<label for="la-rive-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="la-rive-50" type="radio" name="la-rive-form[]" class="radio-volume__input">
+										<label for="la-rive-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="la-rive-100" type="radio" name="la-rive-form[]" class="radio-volume__input">
+										<label for="la-rive-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Montblanc">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Montblanc</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="montblanc-10" type="radio" name="montblanc-form[]" class="radio-volume__input" checked>
+										<label for="montblanc-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="montblanc-30" type="radio" name="montblanc-form[]" class="radio-volume__input">
+										<label for="montblanc-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="montblanc-50" type="radio" name="montblanc-form[]" class="radio-volume__input">
+										<label for="montblanc-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="montblanc-100" type="radio" name="montblanc-form[]" class="radio-volume__input">
+										<label for="montblanc-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+					<li class="catalog__product">
+						<article class="catalog__card card-product">
+							<a href="#" class="card-product__img">
+								<img src="img/product.webp" alt="Avon">
+							</a>
+							<h3 class="card-product__title">
+								<a href="#" class="card-product__link-title">Avon</a>
+							</h3>
+							<div class="card-product__volume volume-product">
+								<span class="volume-product__label">Volume ml.</span>
+								<div class="volume-product__items">
+									<div class="volume-product__radio radio-volume">
+										<input id="avon-10" type="radio" name="avon-form[]" class="radio-volume__input" checked>
+										<label for="avon-10" class="radio-volume__label"><span>10</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="avon-30" type="radio" name="avon-form[]" class="radio-volume__input">
+										<label for="avon-30" class="radio-volume__label"><span>30</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="avon-50" type="radio" name="avon-form[]" class="radio-volume__input">
+										<label for="avon-50" class="radio-volume__label"><span>50</span></label>
+									</div>
+									<div class="volume-product__radio radio-volume">
+										<input id="avon-100" type="radio" name="avon-form[]" class="radio-volume__input">
+										<label for="avon-100" class="radio-volume__label"><span>100</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="card-product__price price-product">
+								<span class="price-product__label">Price:</span>
+								<span class="price-product__value">2 400,00 ₴</span>
+							</div>
+							<button class="card-product__button button"><span>Add to cart</span></button>
+						</article>
+					</li>
+				</ul>
+				<div class="catalog__pagination pagination">
+					<a href="#" class="pagination__arrow pagination__arrow--left _disabled" aria-label="Previous">
+						<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.3 1.59961L8.5 6.99961L1.3 12.3996" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+					<ul class="pagination__list">
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">1</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">2</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">3</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">4</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">...</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">39</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">40</a>
+						</li>
+						<li class="pagination__item">
+							<a href="#" class="pagination__link">41</a>
+						</li>
+					</ul>
+					<a href="#" class="pagination__arrow pagination__arrow--right" aria-label="Next">
+						<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.3 1.59961L8.5 6.99961L1.3 12.3996" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

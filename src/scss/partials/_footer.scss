@@ -1,0 +1,118 @@
+.footer {
+	padding: toRem(40) 0;
+	background-color: #12110f;
+	font-family: $fontSecondary, sans-serif;
+	@media (max-width: $tablet) {
+		padding: toRem(30) 0;
+	}
+	&__container {
+		text-align: center;
+	}
+	&__logo {
+		margin-bottom: toRem(30);
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr 1fr 0.8fr;
+		@include adaptiveValue("gap", 40, 20, 0, $containerWidth, 992);
+		@include adaptiveValue("margin-bottom", 60, 30, 0, $containerWidth, 768);
+		text-align: left;
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: toRem(20);
+		&:nth-child(2) {
+			@media (min-width: $mobile) {
+				justify-self: center;
+			}
+		}
+	}
+	&__item,
+	&__link {
+		display: flex;
+		gap: toRem(19);
+		align-items: center;
+		font-size: toRem(18);
+		line-height: 1.4;
+		&::before {
+			content: "";
+			flex: 0 0 toRem(40);
+			width: toRem(40);
+			height: toRem(40);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(10);
+			font-size: toRem(16);
+		}
+	}
+	&__link {
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--goldHover);
+			}
+		}
+	}
+	&__item--location {
+		&::before {
+			background-image: url("../icons/location-footer.svg");
+		}
+	}
+	&__item--hours {
+		&::before {
+			background-image: url("../icons/clock.svg");
+		}
+	}
+	&__link--whatsapp {
+		&::before {
+			background-image: url("../icons/whatsapp.svg");
+		}
+	}
+	&__link--telegram {
+		&::before {
+			background-image: url("../icons/telegram.svg");
+		}
+	}
+	&__link--mail {
+		&::before {
+			background-image: url("../icons/mail.svg");
+		}
+	}
+	&__item--owner {
+		&::before {
+			background-image: url("../icons/building.svg");
+		}
+	}
+	&__privacy {
+		font-size: toRem(14);
+		line-height: 1.4;
+	}
+	&__copy {
+		display: inline-block;
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	&__policy {
+		transition: color 0.3s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--goldHover);
+			}
+		}
+	}
+}

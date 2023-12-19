@@ -1,0 +1,135 @@
+.card-product {
+	display: grid;
+	@include adaptiveValue("gap", 20, 10, 0, 480, 320);
+	@include adaptiveValue("padding", 30, 12, 0, 767.98, 480);
+	border-radius: toRem(4);
+	background-color: var(--dune);
+	border: toRem(1) solid transparent;
+	transition:
+		background 0.3s ease-in-out,
+		border 0.3s ease-in-out;
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: var(--goldHover);
+			background-color: var(--dune-secondary);
+		}
+	}
+	&__img {
+		border-radius: toRem(4);
+		overflow: hidden;
+		aspect-ratio: 245 / 220;
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			transform: scale(1.001);
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+	&__link-title,
+	.volume-product__label {
+		font-family: $fontSecondary;
+		line-height: 1.4;
+	}
+	&__link-title {
+		width: 100%;
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--goldHover);
+			}
+		}
+	}
+	&__price {
+		display: flex;
+		gap: toRem(10);
+		justify-content: space-between;
+	}
+}
+
+.volume-product {
+	&__label {
+		display: inline-block;
+		margin-bottom: toRem(10);
+	}
+	&__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(20);
+	}
+}
+
+.radio-volume {
+	position: relative;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .radio-volume__label:before {
+			box-shadow: 0 0 toRem(10) var(--goldHover);
+		}
+		&:checked + .radio-volume__label {
+			background: var(--bgGold);
+			span {
+				@include gradientNone;
+				color: #3c3428;
+			}
+		}
+	}
+	&__label {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(9) toRem(10);
+		border-radius: toRem(4);
+		border: toRem(1) solid var(--straw);
+		background: #2b2825;
+		box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+		}
+		span {
+			@include gradient;
+			font-size: toRem(14);
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--bgGold);
+				span {
+					@include gradientNone;
+					color: #3c3428;
+				}
+			}
+		}
+	}
+}
+
+.price-product {
+	&__label {
+		font-family: $fontSecondary;
+		@include adaptiveValue("font-size", 18, 16, 0, 480, 320);
+		line-height: 1.4;
+	}
+	&__value {
+		@include gradient;
+		font-family: $fontSecondary;
+		@include adaptiveValue("font-size", 18, 16, 0, 480, 320);
+		font-weight: 700;
+		line-height: 1.4;
+		text-align: right;
+	}
+}

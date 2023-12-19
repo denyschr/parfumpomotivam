@@ -1,0 +1,29 @@
+// Fonts
+$fontMain: "Montserrat";
+$fontSecondary: "Open Sans";
+$fontSize: toRem(16);
+
+// Colors
+:root {
+	--white: #fff;
+	--bone: #e1d3bd;
+	--safari-gray: #beae97;
+	--bgGold: linear-gradient(92deg, #c09e6c -1.94%, #ffebcc 40.99%, #bf936b 98.79%);
+	--goldHover: #c09e6c;
+	--dune: #36332e;
+	--dune-secondary: #211e1c;
+	--duneHover: #36332e74;
+	--straw: #d6b88d;
+}
+
+// Adaptive grid
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1280;
+$containerOffset: 15;
+$containerWidth: calc($maxWidthContainer + ($containerOffset * 2));
+
+// Breakpoints
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);

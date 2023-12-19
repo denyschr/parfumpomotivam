@@ -1,0 +1,37 @@
+.go-to-top {
+	position: fixed;
+	z-index: 15;
+	right: toRem(15);
+	bottom: toRem(15);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: toRem(5);
+	background: var(--dune);
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+	transition:
+		opacity 0.3s ease-in-out,
+		visibility 0.3s ease-in-out;
+	@media (any-hover: hover) {
+		&:hover {
+			background: var(--bgGold);
+		}
+		&:hover svg {
+			path {
+				stroke: var(--dune-secondary);
+			}
+		}
+	}
+	&._active {
+		opacity: 1;
+		visibility: visible;
+	}
+	svg {
+		transform: rotate(-180deg);
+		path {
+			transition: stroke 0.3s ease-in-out;
+		}
+	}
+}

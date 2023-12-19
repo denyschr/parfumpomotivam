@@ -1,0 +1,49 @@
+.checkbox {
+	position: relative;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .checkbox__label:before {
+			box-shadow: 0 0 toRem(5) var(--goldHover);
+		}
+		&:checked + .checkbox__label:before {
+			background: var(--bgGold);
+			border: none;
+		}
+		&:checked + .checkbox__label::after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__label {
+		position: relative;
+		display: inline-flex;
+		gap: toRem(10);
+		font-family: $fontSecondary;
+		line-height: 1.4;
+		cursor: pointer;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 toRem(24);
+			width: toRem(24);
+			height: toRem(24);
+			border-radius: toRem(4);
+			border: toRem(1) solid var(--goldHover);
+			background: #1c1c1c;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			left: toRem(4);
+			top: toRem(5);
+			opacity: 0;
+			visibility: hidden;
+			width: toRem(15);
+			height: toRem(13);
+			background: url("../icons/checkmark.svg") center / toRem(15) toRem(11) no-repeat;
+		}
+	}
+}

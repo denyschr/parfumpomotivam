@@ -1,0 +1,45 @@
+.preloader {
+	position: fixed;
+	z-index: 200;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dune-secondary);
+	transition:
+		opacity 0.3s ease-in-out,
+		visibility 0.3s ease-in-out;
+	&._hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+	&__item {
+		position: relative;
+		display: inline-block;
+		width: toRem(48);
+		height: toRem(48);
+		border-radius: 50%;
+		background: var(--bgGold);
+		animation: rotation 1s linear infinite;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: toRem(44);
+			height: toRem(44);
+			border-radius: 50%;
+			background: var(--dune-secondary);
+		}
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

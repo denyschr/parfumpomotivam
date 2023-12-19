@@ -1,0 +1,13 @@
+@mixin gradient() {
+	background: var(--bgGold);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin gradientNone() {
+	background: unset;
+	background-clip: unset;
+	-webkit-background-clip: unset;
+	-webkit-text-fill-color: unset;
+}

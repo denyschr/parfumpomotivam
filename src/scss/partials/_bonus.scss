@@ -1,0 +1,28 @@
+.bonus {
+	&__container {
+		margin-bottom: toRem(30);
+	}
+	&__inner {
+		padding: toRem(50) 0 toRem(60);
+		@include adaptiveValue("padding-bottom", 60, 102, 0, 991.98, 768);
+		@include adaptiveValue("padding-bottom", 102, 82, 0, 479.98, 390);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__content {
+		display: grid;
+		justify-items: flex-start;
+		@include adaptiveValue("gap", 35, 20, 0, 991.98, 768);
+		max-width: toRem(1094);
+		margin: 0 auto;
+		padding: 0 toRem(15);
+	}
+}
+
+.content-bonus {
+	&__title {
+		color: var(--bone);
+		@include adaptiveValue("font-size", 30, 20, 0, 991.98, 768);
+	}
+}

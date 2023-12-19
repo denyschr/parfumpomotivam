@@ -1,0 +1,20 @@
+.section-offset {
+	@include adaptiveValue("margin-bottom", 50, 40, 0, $containerWidth, 480);
+}
+
+.title {
+	@include gradient;
+	line-height: 1.2;
+}
+
+.title--offset {
+	margin-bottom: toRem(30);
+}
+
+.title--fs24 {
+	@include adaptiveValue("font-size", 24, 22, 0, $containerWidth, 768);
+}
+
+.title--fs30 {
+	@include adaptiveValue("font-size", 30, 22, 0, $containerWidth, 768);
+}

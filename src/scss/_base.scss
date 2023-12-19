@@ -1,0 +1,42 @@
+body {
+	min-width: toRem($minWidth);
+	color: var(--safari-gray);
+	background-color: var(--dune-secondary);
+	font-family: $fontMain, sans-serif;
+	font-size: $fontSize;
+	&.locked {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: clip;
+}
+
+.overlay {
+	@include overlay;
+	z-index: 20;
+	._search-open & {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.page {
+	flex-grow: 1;
+	padding-top: toRem(148);
+	@media (max-width: $mobile) {
+		padding-top: toRem(70);
+	}
+}
+
+[class*="_container"] {
+	max-width: toRem($containerWidth);
+	margin: 0 auto;
+	padding: 0 toRem($containerOffset);
+}

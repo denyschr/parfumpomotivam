@@ -1,0 +1,333 @@
+.catalog {
+	&__body {
+		display: grid;
+		gap: toRem(20);
+		@media (min-width: $tablet) {
+			grid-template-columns: toRem(305) 1fr;
+		}
+	}
+	&__control {
+		max-width: toRem(480);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (min-width: $mobileSmall) {
+			max-width: toRem(305);
+		}
+	}
+	&__products {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
+		gap: toRem(20);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+
+.filter-catalog {
+	&__button {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		padding: toRem(14) toRem(20);
+		border-radius: toRem(4);
+		border: toRem(1) solid transparent;
+		background: var(--dune);
+		._active & {
+			border-color: var(--straw);
+		}
+		span {
+			@include gradient;
+			flex-grow: 1;
+			text-align: left;
+			font-family: $fontSecondary, sans-serif;
+			font-size: toRem(18);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--bgGold);
+				span {
+					@include gradientNone;
+					color: var(--dune);
+				}
+				svg {
+					path {
+						fill: #36332e;
+					}
+				}
+			}
+		}
+	}
+	&__body {
+		display: none;
+		padding: toRem(10);
+		border-radius: toRem(4);
+		background: var(--dune-secondary);
+		box-shadow: 0 toRem(9) toRem(15) 0 rgba(116, 107, 90, 0.41);
+		._active & {
+			display: block;
+		}
+	}
+	&__main {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__reset {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: toRem(10);
+		padding: toRem(6) toRem(20);
+		border-radius: toRem(4);
+		background: var(--dune);
+		span {
+			text-align: left;
+			flex-grow: 1;
+			font-size: toRem(18);
+		}
+		svg path {
+			transition: stroke 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					stroke: var(--bone);
+				}
+			}
+		}
+	}
+}
+
+.item-filter-catalog {
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		width: 100%;
+		padding-left: toRem(8);
+		border-radius: toRem(4);
+		text-align: left;
+		&::after {
+			content: "";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 0 0 toRem(40);
+			width: toRem(40);
+			height: toRem(40);
+			background: url("../icons/arrow-down.svg") center / cover no-repeat;
+			transition: transform 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--duneHover);
+			}
+		}
+		&._active::after {
+			transform: rotate(180deg);
+		}
+		span {
+			@include gradient;
+			flex-grow: 1;
+			font-size: toRem(18);
+		}
+	}
+	&__body {
+		padding: toRem(10) toRem(8) 0;
+		display: none;
+		&._active {
+			display: block;
+		}
+	}
+	&__body--price {
+		padding-top: toRem(40);
+	}
+	&__checkbox {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+
+.list-catalog {
+	&__title {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: toRem(6) toRem(20);
+		border-radius: toRem(4);
+		border: toRem(1) solid #d6b88d;
+		background: #2b2825;
+		box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
+		&::after {
+			content: "";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 0 0 toRem(40);
+			width: toRem(40);
+			height: toRem(40);
+			background: url("../icons/arrow-down.svg") center / cover no-repeat;
+			transition: transform 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #2b282565;
+			}
+		}
+		&._active::after {
+			transform: rotate(180deg);
+		}
+		span {
+			@include gradient;
+			flex-grow: 1;
+			text-align: left;
+			font-family: $fontSecondary;
+		}
+	}
+	&__body {
+		display: none;
+		padding: toRem(8) toRem(10) toRem(10);
+		border-radius: toRem(4);
+		background: var(--dune-secondary);
+		box-shadow: 0 toRem(2) toRem(10) 0 rgba(184, 164, 142, 0.4);
+		&._active {
+			display: block;
+		}
+	}
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+	&__items {
+		display: grid;
+		gap: toRem(12);
+		max-height: toRem(200);
+		padding-right: toRem(16);
+		overflow-y: auto;
+	}
+	&__line {
+		position: relative;
+	}
+	&__checkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:checked + .list-catalog__label {
+			background: var(--bgGold);
+			color: var(--dune);
+			font-weight: 700;
+		}
+	}
+	&__label {
+		display: inline-block;
+		width: 100%;
+		padding: toRem(4) toRem(12);
+		border-radius: toRem(4);
+		font-family: $fontSecondary;
+		font-size: toRem(14);
+		font-weight: 400;
+		line-height: 1.4;
+		text-transform: uppercase;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--bgGold);
+				color: var(--dune);
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.price-filter {
+	padding: 0 toRem(2);
+	&__range {
+		margin-bottom: toRem(10);
+	}
+	&__text {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(10);
+		font-family: $fontSecondary, sans-serif;
+		line-height: 1.4;
+	}
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(10);
+	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 toRem(36);
+		width: toRem(36);
+		height: toRem(36);
+		border: toRem(1) solid var(--goldHover);
+		border-radius: toRem(4);
+		svg {
+			stroke: var(--safari-gray);
+			transition: stroke 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--bgGold);
+				svg {
+					stroke: var(--dune-secondary);
+				}
+			}
+		}
+		&._disabled {
+			pointer-events: none;
+			background-color: #332e27;
+			border-color: transparent;
+			svg {
+				stroke: #4a4640;
+			}
+		}
+		&--left {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		gap: toRem(5);
+	}
+	&__link {
+		display: inline-block;
+		@include adaptiveValue("padding-top", 12, 8, 0, 767.98, 480);
+		@include adaptiveValue("padding-bottom", 12, 8, 0, 767.98, 480);
+		@include adaptiveValue("min-width", 48, 28, 0, 767.98, 480);
+		text-align: center;
+		border-radius: toRem(4);
+		font-size: toRem(14);
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #b7a08b;
+				color: var(--dune);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+}
