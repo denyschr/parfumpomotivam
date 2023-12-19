@@ -1,8 +1,9 @@
+import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 import imagemin from 'imagemin'
 import imageminWebp from 'imagemin-webp'
 
-export default {
+export default defineConfig({
 	plugins: [
 		injectHTML(),
 		{
@@ -15,4 +16,4 @@ export default {
 		}
 	],
 	base: "/perfumery/",
-};
+});
